@@ -2,10 +2,13 @@ class Numeric
   def to_c
     Complex(self)
   end
+  
+  def i
+    Complex(0, self)
+  end
 end
 
 class Complex < Numeric
-  I = Complex.new(0,1)
   
   def self.polar(abs, arg = 0)
     return self.new(abs * Math::cos(arg), abs * Math::sin(arg))
