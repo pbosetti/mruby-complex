@@ -27,8 +27,8 @@ class Complex < Numeric
   
   attr_reader :real, :imag
   def initialize(real = 0, imag=0)
-    @real = real
-    @imag = imag
+    @real = real.to_f
+    @imag = imag.to_f
   end
   
   def *(numeric)
