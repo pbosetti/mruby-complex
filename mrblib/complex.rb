@@ -6,6 +6,10 @@ class Numeric
   def i
     Complex(0, self)
   end
+  
+  def real
+    self
+  end
 end
 
 class Complex < Numeric
@@ -72,7 +76,7 @@ class Complex < Numeric
   end
   
   def abs
-    return Math::sqrt(self.abs2)
+    return self.abs2 ** 0.5
   end
   
   def abs2
