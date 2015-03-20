@@ -22,6 +22,10 @@ assert("Complex#*") do
   assert_float((2.i * 2.i).to_f, -4)
 end
 
+assert("Complex#/") do
+  assert_equal((1.i / 2.i), 0.5)
+end
+
 assert("Complex#conj") do
   assert_equal(2.i.conj, -2.i.conj)
 end
