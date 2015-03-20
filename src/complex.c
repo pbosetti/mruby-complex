@@ -51,8 +51,9 @@ const struct mrb_data_type complex_data_type = {"complex_data",
 
 /* ------------------------------------------------------------------------*/
 void mrb_mruby_complex_gem_init(mrb_state *mrb) {
-  struct RClass *complex;
-  complex = mrb_define_class(mrb, "Complex", mrb->object_class);
+  struct RClass *complex, *numeric;
+  numeric = mrb_class_get(mrb, "Numeric");
+  complex = mrb_define_class_under(mrb, numeric, "Complex", mrb->object_class);
 }
 
 void mrb_mruby_complex_gem_final(mrb_state *mrb) {}
