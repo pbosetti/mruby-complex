@@ -155,7 +155,7 @@ class Complex < Numeric
   end
   
   def to_s
-    "(#{@real}#{@imag>=0?'+':''}#{@imag}i)"
+    "(#{@real}#{@imag >= 0 ? '+' : ''}#{@imag}i)"
   end
   
   def inspect
